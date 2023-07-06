@@ -461,6 +461,19 @@ li img{
     .score-card{
         font-size: 1.7rem;
     }
+    .logo img{
+        margin-left: 0.5rem;
+    }
+}
+@media (max-width:1154px) {
+    .score-card{
+        font-size: 1.7rem;
+    }
+}
+@media (max-width:1668px) {
+    .clock{
+        margin: 2rem auto;
+    }
 }
 ::-webkit-scrollbar-track
 {
