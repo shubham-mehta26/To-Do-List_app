@@ -418,7 +418,7 @@ li img{
     }
     .options-theme.show{
         transform: translateX(19%);
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         width: 100%;
     }
     .primary-container{
