@@ -105,7 +105,7 @@ h1{
 .add-list{
     border: 2px solid black;
     border-radius: 3rem;
-    width: 70%;
+    width: 90%;
     height: 3.5rem;
     margin: 1rem auto;
     display: flex;
@@ -154,7 +154,7 @@ form input:focus{
 .list-item{
     border: 2px solid black;
     border-radius: 1rem;
-    width: 80%;
+    width: 90%;
     height: 3.5rem;
     margin: 1rem auto  ;
     display: flex;
@@ -277,7 +277,7 @@ form input:focus{
 }
 /* Row 2 */
 .row2{
-    width: 70%;
+    width: 90%;
     margin: 2rem auto;
     display: flex;
     align-items: center;
@@ -439,7 +439,7 @@ li img{
         width: 95%;
     }
     .empty-wishlist{
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .name-box{
         width: 60%
@@ -473,6 +473,111 @@ li img{
 @media (max-width:1668px) {
     .clock{
         margin: 2rem auto;
+    }
+}
+@media (max-height: 800px) {
+    header{
+        height: 100px;
+    }
+    footer{
+        height: 110px;
+    }
+    .score-card{
+        font-size: 2rem;
+    }
+    .empty-wishlist{
+        font-size: 2rem;
+    }
+    .date-time{
+        font-size: 1rem;
+        height: 90px;
+        width: 180;
+    }
+    .time{
+        font-size: 1.5rem;
+    }
+    .date{
+        font-size: 1rem;
+    }
+    .clock{
+        /* border-radius: 0;; */
+        height: 180px;
+        width: 180px;
+    }
+    .center{
+        top:82px;
+        left:82px;
+    }
+    .second-hand{
+        left: 85px;
+        height: 80px;
+    }
+    .minute-hand{
+        left: 85px;
+        height: 70px;
+        top:15px;
+    }
+    .hour-hand{
+        height: 40;
+        left: 80px;
+        top: 35px;
+    }
+}
+@media (max-height: 742px) {
+    .score-card{
+        font-size: 1.7rem;
+    }
+    .empty-wishlist{
+        font-size: 2rem;
+    }
+    .date-time{
+        font-size: 1rem;
+        height: 70px;
+        width: 150px;
+        letter-spacing: 0.1rem;
+    }
+    .time{
+        font-size: 1.2rem;
+    }
+    .date{
+        font-size: 0.9rem;
+    }
+}
+@media (max-height:660px) {
+    .clock{
+        /* border-radius: 0;; */
+        height: 140px;
+        width: 140px;
+    }
+    .center{
+        top:62px;
+        left:62px;
+    }
+    .second-hand{
+        top: 0px;
+        left: 67px;
+        height: 65px;
+    }
+    .minute-hand{
+        left: 63px;
+        height: 50px;
+        top:12px;
+    }
+    .hour-hand{
+        height: 35px;
+        left: 64px;
+        top: 31px;
+    }
+}
+@media(max-height: 600px){
+    .clock{
+        display: none;
+    }
+    .row2{
+        margin: 3rem auto;
+    }
+    .empty-wishlist{
+        margin: 1rem auto;
     }
 }
 ::-webkit-scrollbar-track
