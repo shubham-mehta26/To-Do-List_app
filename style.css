@@ -418,7 +418,6 @@ li img{
     }
     .options-theme.show{
         transform: translateX(19%);
-        /* border: 2px solid blue; */
         width: 100%;
     }
     .primary-container{
@@ -431,7 +430,6 @@ li img{
         margin: 1rem auto;
         height: 450px;
         width: 85%;
-        /* border: 2px solid black; */
     }
     
     .info-box{
@@ -454,7 +452,16 @@ li img{
     }
     
 }
-
+@media (max-width:415px){
+    .popup{
+        width: 122%;
+        height: 105%;
+        left: -47px;
+    }
+    .score-card{
+        font-size: 1.7rem;
+    }
+}
 ::-webkit-scrollbar-track
 {
 	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
