@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: 3px solid black;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    align-items: center;
+    max-width: 100%;
+    letter-spacing: 0.6rem;
+    height: 120px;
+}
+h1{
+    font-family: 'Poppins';
+    font-weight: 200;
+}
+.logo img{
+    margin-left: 2rem;
+    height: 6rem;
+}
+
+.theme{
+    width: 200px;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.theme img{
+    height: 2rem;
+}
+.button{
+    margin-left: 1rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    border-style:none ;
+    border-radius: 50%;
+    background: transparent;
+    /* transition:  1s; */
+}
+.selected-theme{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.selected-theme button{
+    margin-left: 0;
+}
+
+.options-theme{
+    width: 0;
+    display: flex;
+    transition: all 1s ;
+    overflow-x: hidden;
+    z-index: 3;
+}
+.options-theme.show{
+    width: 100%;
+}
+
+
+
+.blue{
+    background-color: #4a55a2;
+}
+.dark{
+    background-color: #607d8b;
+}
+.light{
+    background-color: #fff;
+}
+
+/* BODY */
+.body{
+    width: 100%;
+    height: 100%;
+}
+.primary-container{
+    height: 70vh;
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+.secondary-container{
+    position: relative;
+    height: 90%;
+    width: 40%;
+    /* border: 2px solid black; */
+    border-radius: 1rem;
+    box-shadow: 0px 9px 9px 4px rgba(0, 0, 0, 0.474);
+}
+
+.add-list{
+    border: 2px solid black;
+    border-radius: 3rem;
+    width: 70%;
+    height: 3.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbdb
+}
+.add-list-input{
+    /* border: 2px solid green; */
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    
+}
+.add-button{
+    margin-left: 0;
+    transition: 1s ease;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid blue; */
+    height: 100%;
+    width: 100%;
+}
+form input{
+    border-radius: 3rem;
+    border-style: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    overflow-x: auto;
+    background-color: #dbdbdb;
+}
+form input:focus{
+    outline: none;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+.show-list{
+    height: 80%;
+    overflow-y: scroll;
+}
+.list-item{
+    border: 2px solid black;
+    border-radius: 1rem;
+    width: 80%;
+    height: 3.5rem;
+    margin: 1rem auto  ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    font-family: 'Poppins';
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.list-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.list-text{
+    width: 60%;
+}
+
+.delete-button img{
+    height: 2rem;
+}
+
+.empty-wishlist{
+    width: 80%;
+    height: 50%;
+    margin: 5rem auto;
+    font-size: 3rem;
+    font-family: 'poppins';
+    font-style: italic;
+    color: #333;
+    text-shadow: 2px 4px 3px #333;
+}
+
+.completed{
+    background: rgba(26, 211, 26, 0.217);
+}
+
+/* Name box */
+.name-box{
+    width: 80%;
+    margin: 2rem auto;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 2rem;
+    border-bottom: 2px dotted black;
+}
+.name-change-button{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.edit-button img{
+    
+    height: 2rem;
+}
+/* Name asking */
+
+.secondary-container {
+    position: relative;
+}
+
+.name-change-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    font-family: 'poppins';
+}
+
+.popup h2 {
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.popup input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: #333;
+    border-radius: 2rem;
+    font-family: 'poppins';
+}
+.popup input[type="text"]:focus {
+    outline: none;
+}
+
+.popup button {
+    width: 5rem;
+    /* border: 2px solid ; */
+    color: white;
+    margin-left: 0;
+    font-family: 'poppins';
+}
+.popup button:hover{
+    color: #333;
+    background-color: white;
+}
+/* Row 2 */
+.row2{
+    width: 70%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* Score Card */
+.score-card{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 2rem;
+}
+/* CLock */
+.date-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 120px;
+    border-radius: 2rem;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+  
+.time {
+    font-size: 32px;
+}
+  
+.date {
+    font-size: 16px;
+}
+  
+  
+  
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 5rem auto;
+    background-color: transparent;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+  
+.hour-hand,
+.minute-hand,
+.second-hand {
+    position: absolute;
+    background-color: #333;
+    transform-origin: bottom center;
+}
+  
+.hour-hand {
+    width: 6px;
+    height: 50px;
+    top: 50px;
+    left: 97px;
+    /* visibility: hidden; */
+}
+  
+.minute-hand {
+    width: 4px;
+    height: 70px;
+    top: 27px;
+    left: 98px;
+}
+  
+.second-hand {
+    width: 2px;
+    height: 90px;
+    top: 8px;
+    left: 99px;
+    background-color: red;
+}
+  
+.center {
+    position: absolute;
+    top: 96px;
+    left: 96px;
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+}
+  
+  
+/* Footer */
+
+footer{
+    height: 160px;
+    width: 100%;
+    border-top: 3px solid black;
+    border-radius: 2rem;
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.owner{
+    width: 45%;
+    text-align: center;
+}
+.social{
+    width: 45%;
+}
+.social ul{
+    display: flex;
+    justify-content: space-around;
+}
+.social li{
+    list-style: none;
+}
+li img{
+    height: 2rem;
+}
+
+@media (max-width : 600px) {
+    .body{
+        height: 1270px;
+        /* background-color: #4a55a2; */
+    }
+    .logo img{
+        height: 5rem;
+        
+    }
+    .theme img{
+        width: 2rem;
+        
+    }
+    .button{
+        margin-left: 0.5rem;
+    }
+    h1{
+        display: none;
+    }
+    .options-theme.show{
+        transform: translateX(19%);
+        border: 2px solid blue;
+        width: 100%;
+    }
+    .primary-container{
+        height: 100%;
+        flex-direction: column;
+        justify-content:left;
+    }
+    .secondary-container{
+        
+        margin: 1rem auto;
+        height: 450px;
+        width: 85%;
+        /* border: 2px solid black; */
+    }
+    
+    .info-box{
+        height: 750px;
+    }
+    .add-list{
+        width: 95%;
+    }
+    .empty-wishlist{
+        font-size: 2rem;
+    }
+    .name-box{
+        width: 60%
+    }
+    .row2{
+        flex-direction: column;
+    }
+    .date-time{
+        margin-top: 3.5rem;
+    }
+    
+}
+
+::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	border-radius: 15px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.list-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: background-color 1s ease;
+}
+  
+.list-item input[type="checkbox"]:checked {
+    background-color: #333;
+    transition: background-color 1s ease;
+}
+

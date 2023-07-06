@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishList</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="logo">
+            <img src="logo/logo-white.jpg" alt="Logo">
+        </div>
+        <div class="title">
+            <h1>WishList</h1>
+        </div>
+        <div class="theme">
+            
+            <div class="selected-theme">
+                <button name="light" class="button light">
+                    <img src="logo/moon.svg" alt="">
+                </button>
+            </div>
+            <div class="options-theme ">
+                <div class="dark-theme">
+                    <button name="dark" class="button dark">
+                        <img src="logo/moon.svg" alt="">
+                    </button>
+                </div>
+                <div class="blue-theme">
+                    <button name="blue" class="button blue">
+                        <img src="logo/moon.svg" alt="">
+                    </button>
+                </div>
+                <div class="light-theme">
+                    <button name="light" class="button light">
+                        <img src="logo/moon.svg" alt="">
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="primary-container">
+        <div class="main-list-box secondary-container">
+            <div class="add-list">
+                <form>
+                    <div class="add-list-input">
+                        <input name="listInput" placeholder="Add Your Wish Here" type="text" required>
+                    </div>
+                    <div class="add-list-button">
+                        <button onclick="rotateButton(this)" class="add-button button">
+                            <img src="logo/add.svg" alt="add button">
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+            <div class="show-list">
+            
+            </div>
+        </div>
+        <div class="info-box secondary-container">
+            <div class="name-box">
+                Welcome Guest!
+            </div>
+            <div class="name-change-button">
+                <button class="button edit-button" onclick="togglePopup()"><img src="logo/edit.svg" alt="Edit button"></button>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <h2>Enter your Name!</h2>
+                    <input type="text" id="beautiful-name-input" placeholder="Enter Your Name">
+                    <button class="button submit-button" onclick="changeName()">Submit</button>
+                    <button class="button cancel-button" onclick="togglePopup()">Cancel</button>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="score-card">
+                    <!-- Score will be updated here -->
+                    
+                </div>
+                <div class="date-time">
+                    <div class="time" id="clock-time"></div>
+                    <div class="date" id="clock-date"></div>
+                </div>
+            </div>
+            
+            <div class="clock">
+                <div class="hour-hand" id="hour-hand"></div>
+                <div class="minute-hand" id="minute-hand"></div>
+                <div class="second-hand" id="second-hand"></div>
+                <div class="center"></div>
+              </div>
+              
+        </div>
+        
+    </div>
+        
+    <footer>
+        <div class="owner">
+        ~Shubham Mehta
+        </div>
+        <div class="social">
+            <ul>
+                <li><a  target="_blank" href="https://github.com/shubham-mehta26"> <img src="logo/github.svg" alt=""> </a></li>
+                <li><a target="_blank" href="https://www.instagram.com/shubham_mehta26/"> <img src="logo/instagram.svg" alt=""> </a></li>
+                <li><a target="_blank" href="https://twitter.com/shubham_mehta26"> <img src="logo/twitter.svg" alt=""> </a></li>
+            </ul>
+        </div>
+       
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
